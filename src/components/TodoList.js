@@ -53,7 +53,9 @@ const TodoList = ({ todos, visibilityFilter }) => {
     return (
         <div className="todo-list">
             <div
-                className={todos && todos.length >= 2 && visibilityFilter === 'all' ? 'sorter visible' : 'sorter'}
+                className={todos && todos.length >= 2
+                && (visibilityFilter !== 'incomplete' && visibilityFilter !== 'completed')
+                    ? 'sorter visible' : 'sorter'}
                 onClick={() => sorter()}
             >
                 { sort || 'v' }
