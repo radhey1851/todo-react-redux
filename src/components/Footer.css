@@ -1,0 +1,82 @@
+.footer {
+    font-size: 0.75em;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0.25em 0.25em ;
+    background-color: rgba(248, 162, 81, 0.76);
+    box-shadow: 7px 7px 10px 0px rgba(173,159,173,0.59);
+}
+
+.filter{
+    flex: 1 auto;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.filter.active {
+    text-decoration-line: underline;
+}
+
+.filter:hover{
+    text-decoration-line: underline;
+}
+
+.task-clear {
+    padding: 0.1em 0.2em;
+    
+}
+
+.task-clear:hover {
+    outline: 2px solid black;
+}
+
+/* To create tooltip for Clear tasks button */
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    font-size: 0.5em;
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+  
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+  
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* Tooltip arrow */
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }

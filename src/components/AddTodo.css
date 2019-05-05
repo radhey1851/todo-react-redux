@@ -1,0 +1,12 @@
+.add-box{
+    width: 100%;
+    font-size: 24px;
+    padding: 0.5em 0.5em 0.5em 1em;
+    box-sizing: border-box;
+    box-shadow: 7px 7px 10px 0px rgba(173,159,173,0.59);
+    border: 0;
+}
+
+.add-box:focus {
+    outline-color: blanchedalmond;
+}

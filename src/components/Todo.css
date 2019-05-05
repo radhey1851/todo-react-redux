@@ -1,0 +1,58 @@
+.todo-item{
+    list-style-type: none;
+
+}
+
+.view {
+    display: flex;
+}
+
+.check-square {
+    margin:auto 1em auto 1em;
+    display: inline-flex;
+    box-sizing: border-box;
+    }
+
+li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;  
+}
+
+li label {
+    word-break: break-all;
+    width: 100%;
+}
+
+.todo-item.complete label{
+    text-decoration: line-through;
+}
+
+li button {
+    margin-left: 1em;
+    margin-right: 1em;
+    background-color: rgba(255, 255, 255, 0); /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    visibility: hidden;
+}
+
+li:hover button {
+    visibility: visible;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
