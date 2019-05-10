@@ -13,7 +13,7 @@ import './Todo.css';
 * but not when its  a Class
 */
 
-// /*
+
 function Todo(props) {
     const { todo } = props;
 
@@ -72,81 +72,6 @@ function Todo(props) {
     );
 }
 
-//* /
 
-/*
-class Todo extends React.Component {
-    constructor(props){
-        super(props);
-        this.todo = {...props.todo};
-        console.log(this.todo);
-
-        console.log(this.todo.completed);
-
-        this.cls = this.todo.completed ?
-                    "todo-item complete" :
-                    "todo-item";
-        this.labelRef = React.createRef();
-    }
-
-
-    handleChange = (e) => {
-        console.log(this.state.listValue);
-    }
-
-    //For the Delete 'x' button
-    handleBtnClick = (e) => {
-        this.props.deleteTodo(this.todo.id);
-        // To prevent click from bubbling to top li element and triggering a toggleTodo action
-        e.stopPropagation();
-    }
-
-    handleDoubleClick = (e) => {
-        let node = this.labelRef.current;
-        node.contentEditable = true;
-        node.focus();
-
-        node.onkeydown = (event) =>{
-            if (event.key === 'Enter'){
-                node.contentEditable = false;
-                // Dispatch Action to edit the content in store
-                this.props.editTodo(this.todo.id, node.textContent);
-            }
-        }
-
-        node.onblur = (event) => {
-            node.contentEditable = false;
-            // Dispatch Action to edit the content in store
-            this.props.editTodo(this.todo.id, node.textContent);
-        }
-
-
-    }
-
-    render() {
-        return(
-            <div>
-            <li className={this.cls}>
-                <div className="view"  >
-                {this.todo.completed
-                ? <input  className="check-square" type="checkbox" onChange ={() => this.props.toggleTodo(this.todo.id)} checked/>
-                : <input  className="check-square" onClick={() => this.props.toggleTodo(this.todo.id)} type="checkbox"/>}
-                <label
-                    ref={this.labelRef}
-                    className="edit" onFocus={e =>e.stopPropagation()}
-                    onDoubleClick={this.handleDoubleClick}
-                    >
-                        { this.todo.content}
-                </label>
-                <button onClick={this.handleBtnClick}>X</button>
-                </div>
-            </li>
-            <hr></hr>
-            </div>
-        );
-    }
-}
-
-*/
 
 export default connect(null, { deleteTodo, toggleTodo, editTodo })(Todo);
